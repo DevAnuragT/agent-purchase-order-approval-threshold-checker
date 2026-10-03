@@ -1,0 +1,59 @@
+{
+  "name": "review-purchase-order-approval-threshold-checker",
+  "description": "Run Purchase Order Approval Threshold Checker",
+  "version": "0.1.0",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "payload": {
+        "type": "object",
+        "properties": {
+          "purchase_order_id": {
+            "type": "string",
+            "description": "purchase order id"
+          },
+          "amount": {
+            "type": "number",
+            "description": "amount"
+          },
+          "approval_thresholds": {
+            "type": "array",
+            "description": "approval thresholds"
+          },
+          "approvals": {
+            "type": "array",
+            "description": "approvals"
+          }
+        },
+        "required": [
+          "purchase_order_id",
+          "amount",
+          "approval_thresholds",
+          "approvals"
+        ]
+      }
+    },
+    "required": [
+      "payload"
+    ]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      },
+      "score": {
+        "type": "object"
+      },
+      "findings": {
+        "type": "array"
+      }
+    }
+  },
+  "implementation": {
+    "type": "script",
+    "path": "review-purchase-order-approval-threshold-checker.py",
+    "runtime": "python3"
+  }
+}

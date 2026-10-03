@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: purchase-order-approval-threshold-checker
+version: 0.1.0
+description: Compare purchase order amounts with declared approval thresholds and recorded signoffs.
+skills:
+  - purchase-order-approval-threshold-checker-skill
+tools:
+  - review-purchase-order-approval-threshold-checker
+tags:
+  - finance
+  - evidence-driven

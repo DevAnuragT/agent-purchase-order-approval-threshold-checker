@@ -1,0 +1,10 @@
+{
+  "purchase_order_id": "evidence-record",
+  "amount": 1,
+  "approval_thresholds": [
+    "record-1"
+  ],
+  "approvals": [
+    "record-1"
+  ]
+}

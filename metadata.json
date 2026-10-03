@@ -1,0 +1,29 @@
+{
+  "slug": "purchase-order-approval-threshold-checker",
+  "title": "Purchase Order Approval Threshold Checker",
+  "category": "finance",
+  "description": "Compare purchase order amounts with declared approval thresholds and recorded signoffs.",
+  "fields": {
+    "purchase_order_id": {
+      "label": "purchase order id",
+      "kind": "required",
+      "minimum": 0
+    },
+    "amount": {
+      "label": "amount",
+      "kind": "number",
+      "minimum": 1
+    },
+    "approval_thresholds": {
+      "label": "approval thresholds",
+      "kind": "list",
+      "minimum": 1
+    },
+    "approvals": {
+      "label": "approvals",
+      "kind": "list",
+      "minimum": 1
+    }
+  },
+  "limitations": "Uses caller-provided evidence only; cannot confirm external facts. Human review remains required."
+}
